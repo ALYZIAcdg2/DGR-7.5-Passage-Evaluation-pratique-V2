@@ -1,0 +1,280 @@
+:root { 
+    --orange: #EF7D00; 
+    --bordeaux: #7a1212; 
+}
+
+/* --- STYLES GÉNÉRAUX --- */
+body { 
+    font-family: Arial, sans-serif; 
+    background: #ccc; 
+    padding: 20px; 
+    margin: 0;
+}
+
+/* 🔥 VERSION A4 PRO */
+.container { 
+    width: 190mm;
+    max-width: 190mm;
+    margin: auto; 
+    background: white; 
+    padding: 4mm;
+    border: none;
+    box-sizing: border-box;
+    overflow: hidden; /* 🔥 évite page 2 */
+}
+
+/* --- EN-TÊTE --- */
+.main-header {
+    display: flex;
+    border: 1px solid #000;
+    margin-bottom: 5px !important;
+}
+
+.logo-box {
+    width: 35%;
+    border-right: 1px solid #000;
+    padding: 5px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-box img {
+    max-height: 50px;
+    width: auto;
+}
+
+.title-box {
+    width: 65%;
+    text-align: center;
+}
+
+.title-box h1 {
+    margin: 0;
+    font-size: 1.1rem !important;
+    color: var(--orange);
+    border-bottom: 1px solid #000;
+    padding: 2px !important;
+}
+
+.title-box h2 {
+    margin: 2px 0 !important;
+    font-size: 0.9rem !important;
+}
+
+/* --- BLOCS D'INFORMATIONS --- */
+.form-block { margin-bottom: 5px; border: 1px solid #000; }
+.block-header { background: var(--orange); color: white; text-align: center; padding: 4px; font-weight: bold; font-size: 0.9rem; }
+.block-content { display: grid; }
+.grid-2 { grid-template-columns: 1fr 1fr; }
+.grid-3 { grid-template-columns: 1fr 1fr 1.2fr; }
+
+.input-group { border-right: 1px solid #000; }
+.input-group:last-child { border-right: none; }
+.input-group label { display: block; background: #ddd; text-align: center; font-size: 0.75rem; font-weight: bold; padding: 2px; border-bottom: 1px solid #000; }
+.input-group input { width: 100%; border: none; padding: 6px; box-sizing: border-box; text-align: center; font-size: 0.85rem; font-weight: bold; text-transform: uppercase; }
+
+/* --- RÉSULTATS ET VALIDATION --- */
+.result-container, .info-block { display: flex; border: 1px solid #000; margin-bottom: 6px; }
+.result-sidebar, .info-sidebar { background: var(--orange); color: white; width: 28%; display: flex; align-items: center; justify-content: center; text-align: center; padding: 4px; font-weight: bold; font-size: 0.85rem; border-right: 1px solid #000; }
+.result-data, .info-content { width: 72%; padding: 0; }
+
+.res-row { display: flex; border-bottom: 1px solid #000; }
+.res-row:last-child { border-bottom: none; }
+.res-row span {
+    width: 45%;
+    padding: 4px;
+    border-right: 1px solid #000;
+    font-size: 0.8rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.res-row input { width: 55%; border: none; padding: 3px; font-size: 0.85rem; font-weight: bold; text-transform: uppercase; text-align: center; }
+.score-display { width: 55%; text-align: center; padding: 4px; font-size: 0.85rem; }
+
+.info-content { padding: 4px; font-size: 0.75rem; line-height: 1.1; }
+.small-text { font-size: 0.65rem; line-height: 1.05; }
+
+/* --- QUESTIONNAIRE --- */
+.q-title {
+    border-bottom: 2px solid var(--orange);
+    color: var(--orange);
+    margin: 6px 0 2px 0;
+    font-size: 1rem;
+    line-height: 1;
+    padding-bottom: 2px;
+}
+
+.question-card {
+    background: transparent;
+    padding: 0;
+    margin-bottom: 4px;
+    border: none !important;
+}
+
+.question-card p {
+    display: block;
+    width: 100%;
+    border-bottom: 2px solid var(--orange) !important;
+    padding-bottom: 2px;
+    margin: 0 0 3px 0;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.question-flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.options-box { width: 75%; }
+.image-box { width: 20%; text-align: right; }
+.pictogram-img-right { width: 50px !important; height: auto; border: 1px solid #ccc; }
+
+.question-card label { display: block; margin: 3px 0; cursor: pointer; font-size: 0.8rem; }
+
+/* --- SIGNATURES --- */
+.signature-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 6px;
+    border: 2px solid #000;
+}
+
+.main-title-sig {
+    background-color: var(--orange);
+    color: white;
+    border: 1px solid #000;
+    padding: 4px;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.sub-title-sig {
+    background-color: var(--orange);
+    color: white;
+    border: 1px solid #000;
+    padding: 3px;
+    width: 50%;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.sig-zone {
+    border: 1px solid #000;
+    height: 40px !important;
+    vertical-align: top;
+    padding: 0;
+}
+
+.sig-content {
+    width: 100%;
+    height: 100%;
+    padding: 4px;
+    font-size: 0.8rem;
+    line-height: 1.1;
+    box-sizing: border-box;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* --- BAS DE PAGE --- */
+.legal-notice-box {
+    display: flex;
+    border: 2px solid #000;
+    margin-top: 6px;
+}
+
+.legal-text {
+    width: 75%;
+    padding: 3px;
+    font-size: 0.6rem !important;
+    line-height: 1;
+    border-right: 1px solid #000;
+}
+
+.legal-info {
+    width: 25%;
+    padding: 3px;
+    font-size: 0.6rem !important;
+    text-align: center;
+    line-height: 1;
+}
+
+/* --- BOUTONS --- */
+.btn-area { 
+    text-align: center; 
+    padding: 15px; 
+    background: rgba(238, 238, 238, 0.95);
+    position: fixed;
+    bottom: 0; 
+    left: 0;
+    width: 100%;
+    border-top: 2px solid #999; 
+    z-index: 2000;
+}
+.btn { padding: 10px 20px; border: none; color: white; font-weight: bold; cursor: pointer; border-radius: 4px; margin: 0 5px; }
+.valider { background: #0056b3; }
+.pdf { background: #555; }
+.envoyer { background: #28a745; }
+
+/* --- IMPRESSION PDF --- */
+@page {
+    size: A4;
+    margin: 0; 
+}
+
+@media print {
+    .no-print,
+    .btn-area {
+        display: none !important;
+    }
+
+    html, body {
+        background: white !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .container {
+        width: 190mm !important;
+        max-width: 190mm !important;
+        padding: 4mm !important;
+        margin: 0 auto !important;
+    }
+
+    * {
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+    }
+}
+/* Container pour aligner options à gauche et image à droite */
+.q-flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* Style des pictogrammes */
+.q-pictogram {
+    max-height: 75px; /* Taille ajustable selon vos besoins */
+    width: auto;
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin-right: 15px; /* Espace par rapport au bord droit */
+}
+
+/* Rappel pour l'alignement des options */
+.options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    flex: 1; /* Prend l'espace disponible à gauche */
+}
