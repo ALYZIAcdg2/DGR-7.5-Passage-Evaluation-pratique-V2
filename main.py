@@ -57,7 +57,7 @@ async def envoyer_email(fichier_path, nom_agent):
             "name": "CBTA DGR 7.5 V02"
         },
 
-        "subject": f"EVALUATION PRATIQUE DGR 7.5 - {nom_agent.upper()}",
+        "subject": f"EVALUATION PRATIQUE DGR 7.5 v2- {nom_agent.upper()}",
 
         "content": [{
             "type": "text/plain",
